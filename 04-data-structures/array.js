@@ -88,3 +88,81 @@ vegetables.forEach(function(veg, index){
     console.log(index + ": " + veg);
 });
 
+// map() - Creates a new array populated with the results of calling a provided function on every element in the calling array.
+console.log("---------------- map() ----------------");
+const newVegetables = vegetables.map(function(veg){
+    return veg.toUpperCase();
+});
+console.log(newVegetables);
+
+
+// filter() - Creates a new array with all elements that pass the test implemented by the provided function.
+console.log("---------------- filter() ----------------");
+const filteredVegetables = vegetables.filter(function(veg){
+    return veg.startsWith("C");
+});
+console.log(filteredVegetables);
+
+
+// reduce() - Executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+console.log("---------------- reduce() ----------------");
+        const totalVegetables = vegetables.reduce(function(total, veg){
+    return total + veg.length;
+}, 0);
+console.log(totalVegetables);
+
+
+
+// find() - Returns the first element in the array that satisfies the provided testing function.
+console.log("---------------- find() ----------------");
+const foundVegetable = vegetables.find(function(veg){
+    return veg.startsWith("C");
+});
+console.log(foundVegetable);
+
+
+
+// every() - Tests whether all elements in the array pass the test implemented by the provided function.
+console.log("---------------- every() ----------------");
+const allStartsWithC = vegetables.every(function(veg){  
+    return veg.startsWith("C");
+});
+console.log(allStartsWithC);
+
+
+// some() - Tests whether at least one element in the array passes the test implemented by the provided function.
+console.log("---------------- some() ----------------");
+const someStartsWithC = vegetables.some(function(veg){
+    return veg.startsWith("C");
+});
+console.log(someStartsWithC);
+
+
+
+// sort() - Sorts the elements of an array in place and returns the sorted array.
+console.log("---------------- sort() ----------------");
+const sortedVegetables = vegetables.sort();
+console.log(sortedVegetables);
+
+const sortedVegetables2 = vegetables.sort(function(a, b){
+    return a.length - b.length;
+});
+console.log(sortedVegetables2);
+
+// reverse() - Reverses the order of the elements in an array in place and returns the array.
+console.log("---------------- reverse() ----------------");
+const reversedVegetables = vegetables.reverse();
+console.log(reversedVegetables);
+
+
+
+// join() - Creates and returns a new string by concatenating all of the elements in an array, separated by commas or a specified separator string.
+const joinedVegetables = vegetables.join(", ");
+console.log(joinedVegetables);
+
+
+// concat() - Creates a new array by concatenating the elements of an array with the elements of one or more other arrays.
+const moreVegetables = vegetables.concat(["Spinach", "Potato"], ["Carrot", "Broccoli"]);
+console.log(moreVegetables);
+
+
