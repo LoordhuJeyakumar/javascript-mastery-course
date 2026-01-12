@@ -65,3 +65,17 @@
 
 // 5. Select all elements with class "card", create a new <span> with text "New", and append it to the first selected card element.
 // Your code here:
+
+
+
+// === Styling Tasks Using classList and style ===
+
+// Task 1: Add a 'highlight' class to the first element with class 'item'.
+
+// Task 2: Remove the 'active' class from the element with id 'main' if it exists.
+
+// Task 3: Toggle the 'selected' class on the first button element in the document.
+
+// Task 4: Change the background color of the element with class 'content' to yellow using the style property.
+
+// Task 5: Add both 'visible' and 'bordered' classes to the element with id 'header'.
