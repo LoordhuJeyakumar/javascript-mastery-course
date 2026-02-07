@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .script-selector {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .script-selector h2 {
+            margin-top: 0;
+        }
+        .script-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .script-btn {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .script-btn:hover {
+            background-color: #45a049;
+        }
+        .script-btn.active {
+            background-color: #2196f3;
+        }
+        .clear-btn {
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .clear-btn:hover {
+            background-color: #da190b;
+        }
+        #demo-container {
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="script-selector">
+        <h2>DOM Manipulation Demo</h2>
+        <p>Select a script to run and see the demonstration:</p>
+        <div class="script-buttons">
+            <button class="script-btn" data-script="01-removing-replacing-elements.js">1. Removing/Replacing</button>
+            <button class="script-btn" data-script="02-attributes.js">2. Attributes</button>
+            <button class="script-btn" data-script="03-dom-traversal.js">3. DOM Traversal</button>
+            <button class="script-btn" data-script="04-dom-ready.js">4. DOM Ready</button>
+            <button class="script-btn" data-script="05-event-delegation.js">5. Event Delegation</button>
+            <button class="script-btn" data-script="06-form-events.js">6. Form Events</button>
+            <button class="script-btn" data-script="07-advanced-techniques.js">7. Advanced Techniques</button>
+            <button class="script-btn" data-script="08-content-security.js">8. Content Security</button>
+            <button class="script-btn" data-script="script.js">Core Examples</button>
+            <button class="clear-btn" id="clear-btn">Clear</button>
+        </div>
+    </div>
+
+    <div id="demo-container"></div>
+
+    <script>
+        // Script loader
+        const scriptButtons = document.querySelectorAll('.script-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        let currentScript = null;
+
+        scriptButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                scriptButtons.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Clear previous demo
+                clearDemo();
+                
+                // Remove previous script if exists
+                if (currentScript) {
+                    currentScript.remove();
+                }
+                
+                // Load new script
+                const scriptName = btn.getAttribute('data-script');
+                currentScript = document.createElement('script');
+                currentScript.src = scriptName;
+                currentScript.onerror = () => {
+                    alert(`Error loading ${scriptName}. Make sure the file exists.`);
+                };
+                document.body.appendChild(currentScript);
+            });
+        });
+
+        clearBtn.addEventListener('click', () => {
+            clearDemo();
+            scriptButtons.forEach(b => b.classList.remove('active'));
+            if (currentScript) {
+                currentScript.remove();
+                currentScript = null;
+            }
+        });
+
+        function clearDemo() {
+            const container = document.getElementById('demo-container');
+            container.innerHTML = '';
+        }
+    </script>
+</body>
+</html>
