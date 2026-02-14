@@ -51,4 +51,33 @@ let fullName = firstName + " " + lastName;
 
 // Modern way (Template Literals)
 let greeting = `Hello, ${firstName} ${lastName}!`;
+
+## String Methods
+
+```javascript
+let text = "   JavaScript is Fun!   ";
+
+console.log(text.length);        // 24 (includes spaces)
+console.log(text.trim());        // "JavaScript is Fun!" (removes outer spaces)
+console.log(text.toUpperCase()); // "   JAVASCRIPT IS FUN!   "
+console.log(text.split(" "));    // ["", "", "", "JavaScript", "is", "Fun!", "", "", ""]
+console.log(text.includes("JS")); // false
+```
+
+## Math Methods
+
+```javascript
+console.log(Math.PI);            // 3.14159...
+console.log(Math.round(4.7));    // 5
+console.log(Math.floor(4.7));    // 4 (rounds down)
+console.log(Math.ceil(4.1));     // 5 (rounds up)
+console.log(Math.random());      // Random number between 0 and 1
+
+// Random number between 1 and 10
+let randomNum = Math.floor(Math.random() * 10) + 1;
+
+// Formatting numbers
+let price = 19.99342;
+console.log(price.toFixed(2));   // "19.99" (returns a string)
+```
 ```

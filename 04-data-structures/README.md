@@ -10,8 +10,9 @@ Data structures allow us to organize and store data efficiently. In JavaScript, 
 1.  **Arrays**: Ordered lists of data.
 2.  **Array Methods**: `push`, `pop`, `map`, `filter`, `reduce`.
 3.  **Objects**: Key-value pairs.
-4.  **JSON**: JavaScript Object Notation.
-5.  **ES6 Features**: Destructuring, Spread Operator.
+4.  **Object Utilities**: `Object.keys()`, `Object.values()`, `Object.entries()`.
+5.  **JSON**: JavaScript Object Notation.
+6.  **ES6 Features**: Destructuring, Spread Operator.
 
 ## 📖 Resources
 - [Cheatsheet](./cheatsheet.md)

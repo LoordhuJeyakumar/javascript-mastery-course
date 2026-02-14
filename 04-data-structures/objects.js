@@ -17,7 +17,7 @@ let person = {
         city: "New York",
         zipCode: "10001"
     },
-    great : function() {
+    great: function () {
         console.log("Hello, my name is " + this.name);
     }
 };
@@ -63,7 +63,7 @@ let company = {
                 street: "123 Tech Ave",
                 city: "San Francisco",
                 zipCode: "94107"
-            }   
+            }
         },
         {
             name: "Bob",
@@ -93,11 +93,19 @@ for (let key in person) {
 }
 
 // Object methods
-person.introduce = function() {
+person.introduce = function () {
     console.log("Hi, I'm " + this.name + " and I'm " + this.age + " years old.");
 };
 
 person.introduce();
+
+// --- Object Static Methods ---
+console.log("Keys:", Object.keys(person));
+console.log("Values:", Object.values(person));
+console.log("Entries:", Object.entries(person));
+
+// Checking if a property exists
+console.log("Has age?", person.hasOwnProperty("age"));
 
 // Summary
 /*

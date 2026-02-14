@@ -35,7 +35,7 @@ let number = 15;
 
 if (number < 10) {
     console.log("The number is less than 10.");
-} else if (number === 10  ) {
+} else if (number === 10) {
     console.log("The number is equal to 10.");
 } else {
     console.log("The number is greater than 10.");
@@ -58,3 +58,28 @@ const age2 = 16
 const canVote = age2 >= 18 ? "You can vote." : "You cannot vote yet.";
 
 console.log(canVote);
+
+// --- Truthiness & Falsiness ---
+
+// Falsy values: false, 0, "", null, undefined, NaN
+if (0) {
+    console.log("This will NOT run");
+}
+
+if ("") {
+    console.log("This will NOT run");
+}
+
+let score = 0;
+if (score === 0) {
+    console.log("Score is zero"); // Use strict equality to check for zero specifically
+}
+
+// Truthy values: anything else
+if ("Hello") {
+    console.log("Strings are truthy!");
+}
+
+if ([]) {
+    console.log("Empty arrays are truthy!");
+}

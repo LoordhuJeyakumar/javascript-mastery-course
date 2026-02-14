@@ -48,6 +48,16 @@ let person = {
 // Accessing
 console.log(person.name); // Dot notation
 console.log(person["age"]); // Bracket notation
+
+## Object Static Methods
+
+```javascript
+const keys = Object.keys(person);     // ["name", "age", "isEmployed", "greet"]
+const values = Object.values(person); // ["John", 30, true, function]
+const entries = Object.entries(person); // [["name", "John"], ["age", 30], ...]
+
+console.log(keys.length); // Count properties
+```
 ```
 
 ## Destructuring & Spread

@@ -48,3 +48,14 @@ let undefinedValue = undefined; //declaring a variable with the value undefined
 
 let undefinedVariable; //declaring a variable without a value
 console.log(undefinedVariable); //undefined
+
+// String Methods Demonstration
+let course = "JavaScript Mastery";
+console.log(course.length); // 18
+console.log(course.toUpperCase()); // JAVASCRIPT MASTERY
+console.log(course.charAt(0)); // J
+
+// Math Methods Demonstration
+let randomVal = Math.random();
+console.log(Math.floor(5.95)); // 5
+console.log(Math.ceil(5.05)); // 6

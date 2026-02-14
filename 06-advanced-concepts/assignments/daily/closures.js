@@ -1,13 +1,27 @@
 // Assignment: Closures & Classes
 
-// 1. Create a function `createGreeting(greeting)` that returns a function.
+// --- 1. CLOSURES ---
+// Create a function `createGreeting(greeting)` that returns a function.
 // The returned function should take a name and log "{greeting}, {name}!".
-// Your code here:
+// Example: const sayHello = createGreeting("Hello"); sayHello("John"); // "Hello, John!"
 
+function createGreeting(greeting) {
+    // Your code here:
+}
 
-// 2. Create a class `Rectangle` with a constructor that takes `width` and `height`.
+// --- 2. CLASSES ---
+// Create a class `Rectangle` with a constructor that takes `width` and `height`.
 // Add a method `getArea()` that returns the area.
-// Your code here:
+// Add a method `getPerimeter()` that returns the perimeter.
 
+class Rectangle {
+    // Your code here:
+}
 
-// 3. Test your code.
+// --- 3. TEST YOUR CODE ---
+// const hello = createGreeting("Welcome");
+// hello("Student");
+
+// const rect = new Rectangle(10, 5);
+// console.log("Area:", rect.getArea());
+// console.log("Perimeter:", rect.getPerimeter());

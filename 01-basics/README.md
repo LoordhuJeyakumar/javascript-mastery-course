@@ -9,8 +9,10 @@ Welcome to the foundation of JavaScript! In this module, we will cover the build
 ## 📚 Topics Covered
 1.  **Variables**: `var`, `let`, and `const`.
 2.  **Data Types**: String, Number, Boolean, Null, Undefined.
-3.  **Operators**: Arithmetic (`+`, `-`, `*`, `/`), Assignment (`=`), and Comparison (`==`, `===`).
+3.  **Operators**: Arithmetic, Assignment, Comparison, and **Logical Operators** (`&&`, `||`, `!`).
 4.  **Type Coercion**: How JS handles different types together.
+5.  **String Methods**: `.length`, `.toUpperCase()`, `.toLowerCase()`, `.trim()`, `.split()`.
+6.  **Math Methods**: `Math.random()`, `Math.floor()`, `Math.round()`, `.toFixed()`.
 
 ## 📖 Resources
 - [Cheatsheet](./cheatsheet.md) - Quick reference for syntax.

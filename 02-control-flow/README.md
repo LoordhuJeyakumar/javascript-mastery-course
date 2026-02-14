@@ -11,6 +11,7 @@ Control flow allows your code to make decisions and repeat actions.
 2.  **Switch Statements**: Handling multiple conditions cleaner.
 3.  **Loops**: `for`, `while`, `do...while`.
 4.  **Ternary Operator**: A shortcut for `if...else`.
+5.  **Truthiness & Falsiness**: Understanding what evaluates to true or false.
 
 ## 📖 Resources
 - [Cheatsheet](./cheatsheet.md)

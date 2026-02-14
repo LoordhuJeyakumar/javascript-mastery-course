@@ -86,5 +86,35 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
+## Truthiness & Falsiness
+
+In JavaScript, every value has an inherent boolean value.
+
+### Falsy Values (evaluate to `false`):
+- `false`
+- `0` (zero)
+- `""` (empty string)
+- `null`
+- `undefined`
+- `NaN` (Not a Number)
+
+### Truthy Values:
+Everything else is **truthy**, including:
+- `"0"` (string with zero)
+- `"false"` (string with text)
+- `[]` (empty array)
+- `{}` (empty object)
+
+### Practical Example:
+```javascript
+let username = "";
+
+if (username) {
+  console.log("Welcome " + username);
+} else {
+  console.log("Please enter a username"); // This will run
+}
+```
+
 
 
