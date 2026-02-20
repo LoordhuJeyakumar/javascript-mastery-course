@@ -1,43 +1,46 @@
-// 02-closures.js
-// 🎓 Topic: Closures
+/**
+ * 🎒 Closures (The Backpack Analogy)
+ * 
+ * When a function is born, it "remembers" its environment. 
+ * Imagine a student leaving school (the outer function) but carrying 
+ * a backpack full of supplies (variables) that only they can access.
+ */
 
-/* 
-  A closure is the combination of a function bundled together with 
-  references to its surrounding state (the lexical environment).
-*/
+// --- 💡 Real-World Example: A Secure ATM ---
 
-// 1. Basic Closure Example
-function outerFunction(outerVariable) {
-    return function innerFunction(innerVariable) {
-        console.log("Outer:", outerVariable);
-        console.log("Inner:", innerVariable);
-    }
-}
-
-const closureInstance = outerFunction("Outside");
-closureInstance("Inside");
-
-// 2. Practical Use: Data Privacy (Encapsulation)
-function createCounter() {
-    let count = 0; // This variable is private!
+function createAccount(owner) {
+    let balance = 0; // 🔒 This is a PRIVATE variable inside the "backpack"
 
     return {
-        increment: function () {
-            count++;
-            console.log("Current Count:", count);
+        deposit: function (amount) {
+            balance += amount;
+            console.log(`✅ ${owner} deposited $${amount}. New balance: $${balance}`);
         },
-        decrement: function () {
-            count--;
-            console.log("Current Count:", count);
+        withdraw: function (amount) {
+            if (amount > balance) {
+                console.log("❌ Insufficient funds!");
+            } else {
+                balance -= amount;
+                console.log(`💸 ${owner} withdrew $${amount}. Remaining: $${balance}`);
+            }
         },
-        getCount: function () {
-            return count;
+        checkBalance: function () {
+            return `💰 Current Balance: $${balance}`;
         }
-    }
+    };
 }
 
-const myCounter = createCounter();
-myCounter.increment(); // 1
-myCounter.increment(); // 2
-console.log("Value:", myCounter.getCount());
-// console.log(count); // ❌ Error: count is not defined here!
+const myATM = createAccount("Alice");
+
+myATM.deposit(100);    // ✅ Alice deposited $100. New balance: $100
+myATM.withdraw(40);    // 💸 Alice withdrew $40. Remaining: $60
+console.log(myATM.checkBalance()); // 💰 Current Balance: $60
+
+// ⚠️ IMPORTANT:
+// console.log(balance); // ❌ ReferenceError! 'balance' is hidden inside the closure.
+
+/**
+ * 🎓 KEY LESSON:
+ * 1. Closures allow "Data Privacy". No one can touch 'balance' except the functions we returned.
+ * 2. The inner functions "closed over" the 'balance' variable and took it with them!
+ */

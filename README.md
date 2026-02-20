@@ -24,9 +24,8 @@ This course is divided into **modules**. Each module focuses on a specific set o
 | **04** | [Data Structures](./04-data-structures) | Arrays, Objects, Maps, and Sets. |
 | **05** | [DOM Manipulation](./05-dom-manipulation) | Interacting with the web page, Events, and UI. |
 | **06** | [Advanced Concepts](./06-advanced-concepts) | Closures, Prototypes, `this`, and Classes. |
-| **07** | [Async JavaScript](./07-async-js) | Promises, Async/Await, and fetching data from APIs. |
-| **08** | [Web APIs](./08-web-apis) | LocalStorage, Geolocation, and browser features. |
-| **09** | [Final Project](./09-final-project) | Build a complete application from scratch. |
+| **09** | [Advanced Patterns](./09-advanced-patterns) | ES Modules, Regex, Date, and Performance. |
+| **10** | [Final Project](./10-final-project) | Capstone challenges and graduation. |
 
 ## 🛠️ Prerequisites
 

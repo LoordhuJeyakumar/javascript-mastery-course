@@ -52,12 +52,25 @@ How to prevent your app from crashing when something goes wrong.
 
 ---
 
-## 💻 Assignments
+## 💡 How to Think Like a Developer
+
+Advanced concepts can feel overwhelming. Use these "Developer Mindsets" to simplify them:
+
+1.  **Hoisting**: Think of it as a **Pre-Scan**. JavaScript scans your code for declarations before running it.
+2.  **Closures**: Focus on the **Scope**. If a function is inside another function, it will *forever* remember the variables around it.
+3.  **The `this` Keyword**: Always look at the **Caller**. Who is calling the function? That is your `this`.
+4.  **Error Handling**: Instead of hoping for the best, **expect the worst**. Wrap risky logic in a safety net.
+
+---
+
+## 💻 Assignments (Problem Statements Only)
 
 ### Daily Practice
-- **Closure Counter**: Create a function that keeps track of a private count.
-- **Dynamic Greeting**: Use `bind` to create specialized greeting functions.
-- **Shape Class**: Create a base class `Shape` and extend it to `Circle` and `Square`.
+Check the `assignments/daily` folder for:
+- **Task 1**: The Counter Locker (Closures)
+- **Task 2**: The Identity Mirror (`this`)
+- **Task 3**: The Vehicle Factory (Classes)
 
-### Weekly Challenge
-- **Library System Pro**: Build a system where you can add books, track status, and handle errors (e.g., trying to borrow a book that's already out) using `try...catch`.
+### Weekly Challenge Pro
+**The Advanced Library System**: 
+Logic only! Create a system that uses Closures for private data, Classes for book types, and `try...catch` for handling missing books.
