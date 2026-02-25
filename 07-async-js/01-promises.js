@@ -28,6 +28,10 @@ const fetchUserData = new Promise((resolve, reject) => {
 fetchUserData
     .then((user) => {
         console.log("✅ Data received:", user.name);
+        return user
+    })
+    .then((user)=>{
+        console.log(user)
     })
     .catch((error) => {
         console.log(error);
@@ -42,4 +46,26 @@ fetchUserData
  * 2. .catch() runs when there is an error.
  * 3. .finally() runs no matter what.
  */
+
+
+const API_URI = "https://jsonplaceholder.typicode.com/posts"
+
+
+
+const fetchPostData = fetch(API_URI)
+
+let postVar;
+
+fetchPostData
+    .then((post)=>{
+      return post.json()
+    })
+    .then((post)=>{
+        //console.log(post)
+        postVar = post
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
+
 
