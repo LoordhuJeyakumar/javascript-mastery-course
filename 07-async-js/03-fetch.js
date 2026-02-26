@@ -13,7 +13,7 @@ async function getUserInfo() {
 
         // This is a REAL public API we can use for testing
         const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
-
+        console.log(response)
         if (!response.ok) {
             throw new Error("Could not reach the server.");
         }
@@ -38,3 +38,11 @@ getUserInfo();
  * 2. response.json() also returns a promise (it takes time to parse).
  * 3. Always check if 'response.ok' is true before using the data!
  */
+
+
+/// XHR (XMLHttpRequest) is the old way to do this, but it's more complicated and less efficient than fetch.
+
+/// --- 💡 Real-World Example: Simulating a Flight Booking with Async/Await --
+// --
+
+    
