@@ -33,7 +33,7 @@ function findMyLocation() {
 }
 
 // Note: This won't run in Node.js. Paste this into your BROWSER CONSOLE to test!
-// findMyLocation();
+findMyLocation();
 
 /**
  * 🎓 KEY LESSON:

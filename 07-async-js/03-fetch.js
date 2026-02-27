@@ -12,9 +12,14 @@ async function getUserInfo() {
         console.log("🌐 Connecting to the Internet...");
 
         // This is a REAL public API we can use for testing
-        const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
-        console.log(response)
+        const response = await fetch('https://jsonplaceholder.typicode.com/users/19999');
+       // console.log(response)
         if (!response.ok) {
+            
+            if (response.status === 404) {
+                throw new Error("❌ User not found (404).");
+            }   
+
             throw new Error("Could not reach the server.");
         }
 

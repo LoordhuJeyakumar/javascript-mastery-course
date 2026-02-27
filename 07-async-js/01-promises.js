@@ -68,4 +68,7 @@ fetchPostData
         console.log(error)
     })
 
+    setTimeout(()=>{
+        console.log(postVar)
+    },3000)
 
