@@ -30,3 +30,22 @@ console.log("Safe Version:", hiddenMessage);
  * 2. .test() checks if a string matches.
  * 3. .replace() swaps the pattern with something else.
  */
+
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+console.log(emailRegex.test("test@example.com")); // true
+/* 
+^ - start of the string
+[^\s@]+ - one or more characters that are not spaces or @
+@ - @
+[^\s@]+ - one or more characters that are not spaces or @
+\. - .
+[^\s@]+ - one or more characters that are not spaces or @
+$ - end of the string
+*/
+
+const phoneRegex = /\d{3}-\d{3}-\d{4}/; // 123-456-7890
+console.log(phoneRegex.test("123-456-7890")); // true
+
+const passwordRegex = /^[a-zA-Z0-9]{8,}$/;
+console.log(passwordRegex.test("12345678")); // true

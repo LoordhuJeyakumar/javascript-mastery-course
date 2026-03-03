@@ -17,6 +17,9 @@ const apiResponse = {
     }
 };
 
+
+// const email1 = apiResponse.profile.contact.email;
+// console.log("User Email:", email1); // undefined (No crash!)
 // 1. Optional Chaining (?.)
 // Without this, if we tried to access 'email', the app would CRASH.
 const email = apiResponse.profile.contact?.email;
