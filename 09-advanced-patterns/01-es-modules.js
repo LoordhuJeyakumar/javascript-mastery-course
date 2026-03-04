@@ -1,7 +1,7 @@
 /**
  * 🧱 ES Modules (The LEGO Analogy)
- * 
- * In the old days, JavaScript was one giant file. 
+ *
+ * In the old days, JavaScript was one giant file.
  * Now, we use Modules to keep things organized.
  */
 
@@ -12,26 +12,26 @@
 export const TAX_RATE = 0.15;
 
 export function calculateTotal(price, quantity) {
-    const subtotal = price * quantity;
-    return subtotal + (subtotal * TAX_RATE);
+  const subtotal = price * quantity;
+  return subtotal + subtotal * TAX_RATE;
 }
 
 export default function calculateTotalDefault(price, quantity) {
-    const subtotal = price * quantity;
-    return subtotal + (subtotal * TAX_RATE);
+  const subtotal = price * quantity;
+  return subtotal + subtotal * TAX_RATE;
 }
 
 //old way of doing it
 const TAX_RATE = 0.15;
 function calculateTotal(price, quantity) {
-    const subtotal = price * quantity;
-    return subtotal + (subtotal * TAX_RATE);
+  const subtotal = price * quantity;
+  return subtotal + subtotal * TAX_RATE;
 }
 
 module.exports = {
-    TAX_RATE,
-    calculateTotal
-}
+  TAX_RATE,
+  calculateTotal,
+};
 
 // 📦 PART 2: The Main Application (Imagine this is in app.js)
 // We 'import' the tools we need.
