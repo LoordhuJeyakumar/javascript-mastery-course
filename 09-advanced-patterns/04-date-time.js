@@ -1,14 +1,17 @@
 /**
  * 📅 Date & Time (The Time Traveler Analogy)
- * 
- * JavaScript's Date object is like a time-tracking machine. 
+ *
+ * JavaScript's Date object is like a time-tracking machine.
  * It records a specific moment in history using "milliseconds" since 1970.
  */
 
 // --- 💡 Real World Example: A Social Media Post ---
 
-const postCreated = new Date('2024-05-15T10:30:00');
+const postCreated = new Date("2024-05-15T10:30:00");
 const now = new Date(); // Current time
+
+console.log(postCreated);
+console.log(now);
 
 console.log("--- Post Information ---");
 console.log("Full Date:", postCreated.toLocaleString());
